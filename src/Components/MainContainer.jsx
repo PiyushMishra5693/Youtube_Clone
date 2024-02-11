@@ -5,7 +5,7 @@ import VideoContainer from './VideoContainer'
 function MainContainer() {
   return (
     <div>
-          <Buttonlist></Buttonlist>
+          <Buttonlist ></Buttonlist>
 
           <VideoContainer></VideoContainer>
     </div>

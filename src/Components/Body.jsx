@@ -1,5 +1,7 @@
+import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
-import VideoContainer from './VideoContainer'
+
+import MainContainer from './MainContainer'
 
 function Body() {
 
@@ -8,16 +10,15 @@ function Body() {
 
   return (
 
-    <div className='flex bg-black'>     
-            <div> 
-                      <Navbar></Navbar>
-            </div>
-             
-             <div>
-                    <VideoContainer></VideoContainer>  
-             </div>
+    <div className='w-screen flex'>     
+        
+      <div>
+            <Navbar></Navbar>
+      </div>
 
-     
+
+      {/* <MainContainer></MainContainer> */}
+        <Outlet/>
     </div>
  
   )

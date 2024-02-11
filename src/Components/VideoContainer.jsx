@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import YOUTUBE_VIDEO_LIST from './utils/constants'
-import Buttonlist from './Buttonlist';
 import Videolist from './Videolist';
+import { Link } from 'react-router-dom';
 
 
 function VideoContainer() {
@@ -23,15 +23,16 @@ function VideoContainer() {
 
   return (
     
-        <div>
+        <div className='h-auto w-auto bg-[rgb(15,15,15)]'>
 
+         
 
-          <div> <Buttonlist></Buttonlist> </div>
+          <div className='flex flex-wrap  justify-evenly '>
 
-          <div className='flex flex-wrap p-4 m-4 justify-evenly'>
+                    {/* {video[0] && <AddVideoCard info={video[0]}/>} */}
 
                   {
-                      video.map( video => <Videolist  id={video.id} info={video}/>)
+                      video.map( (video) => <Link to={"/watch?v="+video.id} key={video.id}><Videolist key={video.id}   info={video}/></Link>)
                   }
                  
                 
