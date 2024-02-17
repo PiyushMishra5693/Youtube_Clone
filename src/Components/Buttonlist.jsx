@@ -1,8 +1,11 @@
 import React from 'react'
+import {  useSelector } from 'react-redux';
 
 const Buttonlist = () => {
+
+  const IsDark = useSelector(store => store.app.IsDarkMode);
   return (
-    <div className='flex justify-between bg-[rgb(15,15,15)] p-4 '>
+    <div className={'flex justify-between  p-4 '+(IsDark?"bg-[rgb(15,15,15)]":"bg-white")}>
       
 
       <h3 className='p-4 ml-4 w-auto h-[50px] text-center  bg-stone-800 text-white rounded-xl hover:bg-gray-400'>All</h3>

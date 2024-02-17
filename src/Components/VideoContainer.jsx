@@ -2,15 +2,22 @@ import React, { useEffect, useState } from 'react'
 import YOUTUBE_VIDEO_LIST from './utils/constants'
 import Videolist from './Videolist';
 import { Link } from 'react-router-dom';
+import {  useSelector } from 'react-redux';
+
+
 
 
 function VideoContainer() {
+
+
+  const IsDark = useSelector(store => store.app.IsDarkMode);
   
   const [video,setvideo]= useState([]);
 
   useEffect(()=>{
       getVideo();
   },[])
+
 
   async function getVideo(){
 
@@ -23,7 +30,7 @@ function VideoContainer() {
 
   return (
     
-        <div className='h-auto w-auto bg-[rgb(15,15,15)]'>
+        <div className={'h-auto w-auto '+(IsDark?'bg-[rgb(15,15,15)]':'bg-white')}>
 
          
 
