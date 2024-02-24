@@ -1,12 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
 
-import MainContainer from './MainContainer'
-
 function Body() {
-
-  
-
 
   return (
 
@@ -16,8 +11,6 @@ function Body() {
             <Navbar></Navbar>
       </div>
 
-
-      {/* <MainContainer></MainContainer> */}
         <Outlet/>
     </div>
  

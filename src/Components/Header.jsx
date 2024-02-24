@@ -10,6 +10,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { YOUTUBE_SEARCH_RESULT } from './utils/constants';
 import { cacheResults } from './utils/searchSlice';
 import { DarkMenu } from './utils/appSlice';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
+import Profile from './Profile';
+import { useAuth0 } from '@auth0/auth0-react';
+
+
 
 
 
@@ -24,8 +30,7 @@ const Header = () => {
 
   const IsDark = useSelector(store => store.app.IsDarkMode);
 
-  console.log(IsDark);
-
+  const { isAuthenticated } = useAuth0();
   
   const dispatch = useDispatch();
   
@@ -134,7 +139,19 @@ const Header = () => {
 
         <IoMdNotifications className={'mt-5 mr-[50px] w-[40px] h-[40px] '+(IsDark?'text-white':'text-[rgb(15,15,15)')}/>
       
-        <img className= "mt-5 mr-[50px] w-[40px] h-[40px] rounded-full " src=" https://i.ibb.co/vcmKwkc/guest.png" alt="" />
+        
+        <div>
+
+          { 
+              isAuthenticated?(<Profile/>):
+              (<img className= "mt-5 mr-[50px] w-[40px] h-[40px] rounded-full " src=" https://i.ibb.co/vcmKwkc/guest.png" alt="" />)
+
+          }
+            
+            { 
+              isAuthenticated?(<LogoutButton/>):(<LoginButton/>)
+            } 
+        </div>
        
         </div>
 
