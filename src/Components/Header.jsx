@@ -72,6 +72,7 @@ const Header = () => {
   
   return (
 
+  // (IsDark?"bg-[rgb(15,15,15)]":"bg-white"
     <div className={'flex w-screen h-20 '+(IsDark?"bg-[rgb(15,15,15)]":"bg-white")}>
       
       

@@ -34,7 +34,7 @@ function VideoContainer() {
 
          
 
-          <div className='flex flex-wrap  justify-evenly '>
+          <div className='flex flex-wrap  justify-evenly sm:flex-col lg:flex-row'>
 
                     {/* {video[0] && <AddVideoCard info={video[0]}/>} */}
 
