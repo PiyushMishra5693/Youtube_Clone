@@ -144,7 +144,7 @@ const Header = () => {
 
           { 
               isAuthenticated?(<Profile/>):
-              (<img className= "mt-5 mr-[50px] w-[40px] h-[40px] rounded-full " src=" https://i.ibb.co/vcmKwkc/guest.png" alt="" />)
+              (<img className= "mt-4 mr-[50px] w-[40px] h-[40px] rounded-full " src=" https://i.ibb.co/vcmKwkc/guest.png" alt="" />)
 
           }
             
