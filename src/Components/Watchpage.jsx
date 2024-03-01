@@ -2,12 +2,13 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { closeMenu } from './utils/appSlice';
 import {  useSearchParams } from 'react-router-dom';
+import {CommentsContainer} from './CommentsContainer';
 
 function Watchpage() {
 
 
   const [searchParams] = useSearchParams();
-  // console.log(searchParams.get("v"));
+ 
   
   const dispatch = useDispatch();
 
@@ -16,6 +17,8 @@ function Watchpage() {
   },[])
 
   return (
+
+    <div>
     <div className='mx-5 py-4'>
           <iframe 
               width="1000" 
@@ -25,6 +28,9 @@ function Watchpage() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowFullScreen>
           </iframe>
+    </div>
+
+      <CommentsContainer/>
     </div>
   )
 }
