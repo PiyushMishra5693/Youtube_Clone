@@ -7,7 +7,7 @@ function Watchpage() {
 
 
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get("v"));
+  // console.log(searchParams.get("v"));
   
   const dispatch = useDispatch();
 
