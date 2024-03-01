@@ -35,8 +35,8 @@ return (
             
             <img  className=" rounded-xl "src ={img_url} alt="Video Thumbnail" />
             <h1 className={'mt-2 font-bold ml-2 py-2 '+(IsDark?"text-white":"text-black")}>{channel_desc}</h1>
-            <h1 className='ml-2 text-[16px] text-[#AAAAAA]'>{channel_name}</h1>
-            <h1 className='ml-2 text-[16px] text-[#AAAAAA]'>{formattedViews} Views</h1>
+            <h1 className={'ml-2 text-[16px] '+(IsDark?"text-[#AAAAAA]":"text-black")}>{channel_name}</h1>
+            <h1 className={'ml-2 text-[16px] '+(IsDark?"text-[#AAAAAA]":"text-black")}>{formattedViews} Views</h1>
     </div>
   )
 }
