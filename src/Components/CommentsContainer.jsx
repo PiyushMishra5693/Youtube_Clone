@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 
 
 const commentData = [
@@ -155,13 +156,17 @@ const Comment = ({data})=>{
 
 const CommentsList = ({comments})=>{
 
+
+    const IsDark = useSelector(store => store.app.IsDarkMode);
+
+
    
     return  comments.map((comment,ind)=>( 
     
         <div key={ind}>
                 <Comment  data={comment}/>
 
-                <div className="ml-10  border border-l-black">
+                <div className={"ml-10  border "+(IsDark?"border-r-white border-t-[rgb(15,15,15)]":"border-l-black ")}>
                     <CommentsList comments={comment.replies}/>
                 </div>
         </div>

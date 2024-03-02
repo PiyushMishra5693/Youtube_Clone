@@ -3,6 +3,7 @@ const YOUTUBE_VIDEO_LIST ='https://youtube.googleapis.com/youtube/v3/videos?part
 
 export const YOUTUBE_SEARCH_RESULT= 'https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='
 
+export const TEXT_LENGTH=20;
 export default YOUTUBE_VIDEO_LIST;
 
 
