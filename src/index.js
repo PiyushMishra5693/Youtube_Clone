@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <Auth0Provider
     domain="dev-e0ead3j4xd0gdnhw.us.auth0.com"
     clientId="uvCny5QizwmBAoEqpEuuS96iYIjWMt4W"

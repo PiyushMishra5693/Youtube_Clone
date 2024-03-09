@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
   const isMenuOpen = useSelector( store=> store.app.isMenuOpen);
-
   const IsDark = useSelector(store => store.app.IsDarkMode);
 
 
@@ -19,7 +18,7 @@ const Navbar = () => {
   return null;
 
   return (
-    <div className={'h-full w-[240px]  shadow-lg  '+(IsDark?"bg-gray-900":"text-white")} >
+    <div className={'h-full w-[240px]  shadow-lg '+(IsDark?"bg-gray-900":"text-white")} >
 
          
 
